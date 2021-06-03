@@ -1,0 +1,75 @@
+
+######################################################################################################################
+# Positive Test cases
+######################################################################################################################
+
+
+TC01 - test_get_times_daily_ibm
+Test conditions: Verify the response when user tries to submit the GET request with below parameters:
+                 symbol=IBM and outputsize=default
+
+Expected outcome:
+                1. Validate status code 200
+
+# --------------------------------------------------------------------------------------------------------------------
+
+TC02 - test_get_times_daily_ibm_output_full
+Test conditions: Verify the response when user tries to submit the GET request with below parameters:
+                 symbol=IBM and outputsize=full
+
+Expected outcome:
+                1. Validate status code 200
+
+
+# --------------------------------------------------------------------------------------------------------------------
+
+
+TC03 - test_get_times_daily_tsco_output_default
+Test conditions: Verify the response when user tries to submit the GET request with below parameters:
+                 symbol=TSCO.LON and outputsize=default
+
+Expected outcome:
+                1. Validate status code 200
+
+# --------------------------------------------------------------------------------------------------------------------
+
+######################################################################################################################
+# Negative Test cases
+######################################################################################################################
+
+
+TC04 - test_get_times_daily_invalid_symbol
+Test conditions: Verify the response when user tries to submit the GET request with below parameters:
+                 invalid symbol
+
+Expected outcome:
+                 1. Validate status code 200
+                 2. Assert the error messsage - "Invalid API call. Please retry or visit the documentation"
+
+
+# --------------------------------------------------------------------------------------------------------------------
+
+
+TC05 - test_get_times_daily_invalid_api_key
+Test conditions: Verify the response when user tries to submit the GET request with below parameters:
+                 invalid api key
+
+Expected outcome:
+                 1. Validate status code 200
+                 2. Assert the error messsage - "the parameter apikey is invalid or missing"
+
+
+# --------------------------------------------------------------------------------------------------------------------
+
+
+TC06 - test_get_exceeds_throttle_limit
+Test conditions: Verify the throttle limit error when user tries to submit the GET request more than 5 times in a minute
+                 with below parameters:
+                 symbol=IBM and outputsize=default
+
+Expected outcome:
+                 1. Validate status code 200
+                 2. Assert the throttle error - "Thank you for using Alpha Vantage! Our standard API call frequency is
+                    5 calls per minute"
+
+# --------------------------------------------------------------------------------------------------------------------
