@@ -13,3 +13,5 @@ DEFAULT_OUTPUT_SIZE = 'default'
 CUSTOM_OUTPUT_SIZE = '10'
 
 THROTTLE_TEXT = 'Thank you for using Alpha Vantage! Our standard API call frequency is 5 calls per minute'
+INVALID_API_TEXT = 'the parameter apikey is invalid or missing'
+INVALID_SYMBOL_TEXT = 'Invalid API call. Please retry or visit the documentation'

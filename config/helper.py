@@ -19,6 +19,12 @@ def submit_request(method_type, service_url, request_json, headers=None):
     return response
 
 
+def validate_response(response, expected_response_content=None):
+    assert response.status_code == 200
+    if expected_response_content is not None:
+        assert expected_response_content in response.text
+
+
 def export_result_to_html_report(request,response_text,request_json,status):
     request.node.response_text = response_text
     request.node.request_json = request_json
