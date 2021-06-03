@@ -67,3 +67,4 @@ Below are the test cases defined as part of automation:
    reports.
 6. conftest.py has pytest fixtures and runs before every test cases.
 7. helper.py has helper functions to build service url, submit request and export report methods.
+8. To View the Report after the execution done, Please navigate to reports folder and then open latest time stamp folder to find the my_report.html
